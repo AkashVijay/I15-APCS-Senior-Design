@@ -1,0 +1,10 @@
+run 
+
+node server/server.js 
+
+to get the webserver up and running, this is mqtt over tcp client connection to a mqtt broker.
+
+then run mqtt-testscripts/subtest.sh to publish to the broker and see if the messages are being recived by the webserver.
+
+
+run mqtt-testscripts/pubtest.sh to sub to the broker and see message published to the broker from the webserver.
