@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Control Panel</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>IoT Control Panel</h1>
+        <div class="controls">
+            <button onclick="sendMessage('L0')">Light off</button>
+            <button onclick="sendMessage('L1')">Light on</button>
+            <button onclick="sendMessage('F0')">Refill food</button>
+            <button onclick="sendMessage('W0')">Refill water</button>
+            <button onclick="sendMessage('D0')">Close door</button>
+            <button onclick="sendMessage('D1')">Open door</button>
+        </div>
+
+        <div id="incoming-messages">
+            <h2>Channel Values</h2>
+            <table id="channel-table">
+                <tr>
+                    <th>Channel</th>
+                    <th>Value</th>
+                </tr>
+                <!-- Dynamic rows added here -->
+            </table>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
